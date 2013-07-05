@@ -1,3 +1,6 @@
+.custom-field erlang-type-prefix
+.erlang-type-prefix ""
+
 .record [
     .name person
     .field [ .name name .type string ]

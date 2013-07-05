@@ -5,7 +5,9 @@
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  lager,
+                  piqi_rpc
                  ]},
   {mod, { demo_app, []}},
   {env, []}

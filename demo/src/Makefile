@@ -25,5 +25,5 @@ $(PERSON_DEFS): ../priv/person.piqi
 
 $(PERSON_RPC): ../priv/person-rpc.piqi
 	piqic-erlang-rpc $(PIQI_INCL) $<
-	#rm person_rpc_piqi_default_impl.erl
+	rm person_rpc_piqi_default_impl.erl
 	mv person_rpc_piqi.hrl person_rpc_piqi_impl.hrl ../include

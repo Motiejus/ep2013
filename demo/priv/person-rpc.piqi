@@ -1,26 +1,23 @@
 .import [ .module person ]
 
-%.custom-field erlang-type-prefix
-%.erlang-type-prefix "roar_labels_"
-
 .function [
     .name get
     .input [
         .field [ .name id .type int ]
+        .field [ .name count .type int ]
     ]
     .error error-type
     .output [
-        .field [ .name records .type person/person-list ]
+        .field [
+            .name records .type person/person-list
+        ]
     ]
 ]
 
 .record [
     .name error-type
-    .field [ .name error .type error-enum ]
-    .field [ .name error-string .type string .default "" .optional ]
-]
-
-.enum [
-    .name error-enum
-    .option [.name sql-error .code 1 ]
+    .field [
+        .name error-string .type string
+        .default "" .optional
+    ]
 ]
