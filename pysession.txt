@@ -1,0 +1,26 @@
+>>> p1 = person()
+>>> p1.id = 0
+>>> p1.name = "J. Random Hacker"
+>>> p1.email = "j.r.hacker@example.com"
+>>> n1 = p1.phone.add()
+>>> n1.type = home; n1.number =  "(111) 123 45 67"
+>>> p1.SerializeToJson()
+'{
+    "name": "J. Random Hacker",
+    "id": 0,
+    "email": "j.r.hacker@example.com",
+    "phone": [{"number":"(111) 123 45 67","type":"work"}]
+}'
+>>> p1.SerializeToXML()
+'<?xml version="1.0" encoding="UTF-8"?>
+<value>
+    <name>J. Random Hacker</name>
+    <id>0</id>
+    <email>j.r.hacker@example.com</email>
+    <phone>
+        <number>(111) 123 45 67</number>
+        <type>work</type>
+    </phone>
+</value>'
+>>> p1.SerializeToString()
+# serialize to gpb. Terminal hangs.

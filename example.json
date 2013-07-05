@@ -1,0 +1,14 @@
+curl -XGET 'http://localhost:9200/test/range/_search?pretty=true' -d '
+{
+    "query" : {
+        "range" : {
+            "age" : { 
+                "from" : "10", 
+                "to" : "20", 
+                "include_lower" : true,
+                "include_upper": true
+            }
+        }
+    }
+}
+'

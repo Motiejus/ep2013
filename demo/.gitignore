@@ -1,0 +1,9 @@
+/deps/
+/ebin/
+/src/person_piqi.erl
+/src/person_rpc_piqi.erl
+/src/person_rpc_piqi_rpc.erl
+
+/include/person_piqi.hrl
+/include/person_rpc_piqi.hrl
+/include/person_rpc_piqi_impl.hrl
